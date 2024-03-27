@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script:wght@400;700&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&family=Zen+Antique&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script:wght@400;700&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&family=Zen+Antique&display=swap');
+
+ :root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif; /*fonte de titulo*/
+    --fonte3: "Poppins", sans-serif; /*fonte do conteudo */
+}
+* {
+    margin: 0px; /* usado para deixar tudo grudadinho para configurar melhor depois*/
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,body {
+    min-height: 100vh;
+    background-color: gray;
+    font-family: var(--fonte1);
+
+}
+
+header { 
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+header > h1 {
+    padding-top: 50px;/*deixar um caixa maior na parte do titulo */
+    font-variant: small-caps;  /*somente as iniciais em letras maiusculas maiores */
+    font-family: var(--fonte2);
+    font-size: 7vw;
+}
+
+header > p {
+    padding-bottom: 50px; /*borda de 50px em baixo, deixando simetrico com o padding-top: 50px (borda de 50px em cima)*/
+
+}
+
+header a, footer a { /* configurações para o link do cabeçalho e do rodapé*/
+    color: white; /*cor */
+    text-decoration: none; /*sem sublinhado */
+    font-weight: bolder; /* negrito */
+}
+
+header a:hover,footer a:hover {
+    text-decoration: underline; /*sublinhado quando passa o mouse em cima*/ 
+}
+
+section { /*conffiguração para todo o texto que tiver na section*/
+    padding-top: 10vh; /* para que em cima tenha uma borda de 10 de acordo com a vh */
+    padding-bottom: 10vh; /*para que em baixo tenha uma borda de 10 de acordo com a vh */
+    line-height: 2em; /*espaçamente entre as linhas */
+    padding-left: 30px; /*para que o texto fique com uma borda lateral. O texto vai mais para a direita */
+    font-size: 3vw;
+}
+
+section > p {
+    padding-bottom: 2em; /*borda em baixo para uma estrofe não ficar colada na outra */
+    font-family: var(--fonte3);
+}
+
+section.normal { /*configuração para a classe normal */
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /*configuração para a classe imagem*/
+    background-color: black;
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.418); /*sombra nas imagens*/
+    background-attachment: fixed; /* fundo com imagem parallax*/
+}
+
+section.imagem > p { /*configuração para o texto que esta dentro da classe imagem */
+    background-color: rgba(128, 128, 128, 0.486);
+    display: inline-block; /*caixa ficar rente ao texto*/
+    padding: 5px; /*criar uma borda entre a caixa e o texto*/
+    
+}
+
+section#img1 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center; /*posição da imagem, a direita e no centro */
+    background-size: cover; /*imagem ficar com o tamanho total dela */
+}
+
+section#img2 {
+    background-image: url(imagens/background002.jpg);
+    background-position: right center; /*posição da imagem, a direita e no centro */
+    background-size: cover; /*imagem ficar com o tamanho total dela */
+}
+
+footer { /*configurações do rodapé*/ 
+     background-color: black;
+     color: white;
+     text-align: center; /*alinhamento do texto no centro*/
+     padding: 10px;
+}
